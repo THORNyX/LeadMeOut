@@ -1,3 +1,17 @@
+# MineshaftElevator bug Fix
+**I've experienced a bug in the mineshafts where the line would search for the highest point near the elevator in an attempt to reach the main entrance, In this situation, I attempted to target the BottomElevatorPanel.**
+
+## MineshaftElevatorFix Installation
+1. Please install the original LeadMeOut first.
+
+   Install via [r2modman](https://thunderstore.io/c/lethal-company/p/ebkr/r2modman/) or the Thunderstore app. Dependencies are handled automatically.
+
+2. Copy and replace "MineshaftElevatorFix/LeadMeOut.dll" into "BepInEx/plugins/LeadMeOut/LeadMeOut.dll".
+
+---
+
+The following is the original README.
+
 # LeadMeOut
 
 **Displays customizable navigation lines on the floor or compass HUD to help you locate facility exits.**
@@ -5,6 +19,8 @@
 Navigating the dark and spooky interiors of Lethal Company can be disorienting and quite lethal if you tend to get lost easily. LeadMeOut overlays real-time navigation directly into your game — either as floor-level path lines leading you to the exits, or as directional markers on your HUD compass. Two modes, fully configurable, always pointing you to safety!
 
 ---
+## Note
+- **Everyone in the Lobby will need to have this mod installed**
 
 ## Features
 
@@ -99,3 +115,6 @@ Inspired by the mod: Navigating Stars by [Nilaier](https://github.com/NilaierMus
 
 ### 1.0.0
 - Initial release.
+
+### 1.0.1
+- Added multiplayer compatibility improvements.

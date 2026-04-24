@@ -180,6 +180,66 @@ namespace LeadMeOut
             mainEntranceTarget = null;
             fireExitTargets.Clear();
 
+            // Search for BottomElevatorPanel 
+            // Preferentially select scene instances that are a clone of their parent and exclude prefab components
+            Transform bottomElevatorPanel = null;
+            foreach (GameObject obj in GameObject.FindObjectsOfType<GameObject>())
+            {
+                if (obj.name.Contains("BottomElevatorPanel"))
+                {
+                    Transform parent = obj.transform.parent;
+                    // Preferably choose the panel under scene instances such as MineshaftElevator(Clone)
+                    if (parent != null && parent.name.Contains("(Clone)"))
+                    {
+                        bottomElevatorPanel = obj.transform;
+                        Plugin.Logger.LogInfo($"LeadMeOut: BottomElevatorPanel (scene instance) found at {obj.transform.position}, parent={parent.name}");
+                        break;
+                    }
+                    // If no scene examples are found, record an alternative one first.
+                    if (bottomElevatorPanel == null)
+                    {
+                        bottomElevatorPanel = obj.transform;
+                    }
+                }
+            }
+
+            if (bottomElevatorPanel != null && bottomElevatorPanel.parent != null && !bottomElevatorPanel.parent.name.Contains("(Clone)"))
+            {
+                Plugin.Logger.LogWarning($"LeadMeOut: BottomElevatorPanel found but parent is not a scene clone. Using it as fallback.");
+            }
+
+            foreach (GameObject obj in GameObject.FindObjectsOfType<GameObject>())
+            {
+                if (obj.name.Contains("EntranceTeleportA") && obj.name.Contains("Clone"))
+                {
+                    // If the "BottomElevatorPanel" exists, change the main entrance navigation target to it.
+                    if (bottomElevatorPanel != null)
+                    {
+                        mainEntranceTarget = bottomElevatorPanel;
+                        Plugin.Logger.LogInfo($"LeadMeOut: Main entrance redirected to BottomElevatorPanel at {bottomElevatorPanel.position}");
+                    }
+                    else
+                    {
+                        mainEntranceTarget = obj.transform;
+                        Plugin.Logger.LogInfo($"LeadMeOut: Main entrance at {obj.transform.position}");
+                    }
+                }
+                if (obj.name.Contains("EntranceTeleportB") && obj.name.Contains("Clone"))
+                {
+                    fireExitTargets.Add(obj.transform);
+                    Plugin.Logger.LogInfo($"LeadMeOut: Fire exit #{fireExitTargets.Count} at {obj.transform.position}");
+                }
+            }
+
+            Plugin.Logger.LogInfo($"LeadMeOut: Found {fireExitTargets.Count} fire exit(s).");
+        }
+
+
+        /*private void FindExits()
+        {
+            mainEntranceTarget = null;
+            fireExitTargets.Clear();
+
             foreach (GameObject obj in GameObject.FindObjectsOfType<GameObject>())
             {
                 if (obj.name.Contains("EntranceTeleportA") && obj.name.Contains("Clone"))
@@ -195,7 +255,7 @@ namespace LeadMeOut
             }
 
             Plugin.Logger.LogInfo($"LeadMeOut: Found {fireExitTargets.Count} fire exit(s).");
-        }
+        }*/
 
         // ── Compass Overlay Mode ──────────────────────────────────────────
 

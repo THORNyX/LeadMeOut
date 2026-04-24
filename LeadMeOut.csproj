@@ -3,7 +3,7 @@
 		<TargetFramework>net472</TargetFramework>
 		<AssemblyName>LeadMeOut</AssemblyName>
 		<Product>LeadMeOut</Product>
-		<Version>1.0.0</Version>
+		<Version>1.0.1</Version>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<LangVersion>latest</LangVersion>
 		<RestoreAdditionalProjectSources>
@@ -20,55 +20,111 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<Reference Include="Assembly-CSharp">
-			<HintPath>K:\SteamLibrary\steamapps\common\Lethal Company\Lethal Company_Data\Managed\Assembly-CSharp.dll</HintPath>
-			<Private>false</Private>
-		</Reference>
-		<Reference Include="UnityEngine">
-			<HintPath>K:\SteamLibrary\steamapps\common\Lethal Company\Lethal Company_Data\Managed\UnityEngine.dll</HintPath>
-			<Private>false</Private>
-			<Aliases>global,UnityEngine</Aliases>
-		</Reference>
-		<Reference Include="UnityEngine.CoreModule">
-			<HintPath>K:\SteamLibrary\steamapps\common\Lethal Company\Lethal Company_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
-			<Private>false</Private>
-			<Aliases>global,UnityEngine</Aliases>
-		</Reference>
-		<Reference Include="UnityEngine.PhysicsModule">
-			<HintPath>K:\SteamLibrary\steamapps\common\Lethal Company\Lethal Company_Data\Managed\UnityEngine.PhysicsModule.dll</HintPath>
-			<Private>false</Private>
-		</Reference>
-		<Reference Include="UnityEngine.AIModule">
-			<HintPath>K:\SteamLibrary\steamapps\common\Lethal Company\Lethal Company_Data\Managed\UnityEngine.AIModule.dll</HintPath>
-			<Private>false</Private>
-		</Reference>
-		<Reference Include="Unity.Netcode.Runtime">
-			<HintPath>K:\SteamLibrary\steamapps\common\Lethal Company\Lethal Company_Data\Managed\Unity.Netcode.Runtime.dll</HintPath>
-			<Private>false</Private>
-		</Reference>
-		<Reference Include="Unity.InputSystem">
-			<HintPath>K:\SteamLibrary\steamapps\common\Lethal Company\Lethal Company_Data\Managed\Unity.InputSystem.dll</HintPath>
-			<Private>false</Private>
-		</Reference>
-		<Reference Include="UnityEngine.UIModule">
-			<HintPath>K:\SteamLibrary\steamapps\common\Lethal Company\Lethal Company_Data\Managed\UnityEngine.UIModule.dll</HintPath>
-			<Private>false</Private>
-		</Reference>
-		<Reference Include="UnityEngine.TextRenderingModule">
-			<HintPath>K:\SteamLibrary\steamapps\common\Lethal Company\Lethal Company_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
-			<Private>false</Private>
-		</Reference>
-		<Reference Include="UnityEngine.UI">
-			<HintPath>K:\SteamLibrary\steamapps\common\Lethal Company\Lethal Company_Data\Managed\UnityEngine.UI.dll</HintPath>
-			<Private>false</Private>
-		</Reference>
-		<Reference Include="LethalCompanyInputUtils">
-			<HintPath>C:\Users\yakka\AppData\Roaming\r2modmanPlus-local\LethalCompany\profiles\Yakka-v80-Test\BepInEx\plugins\Rune580-LethalCompany_InputUtils\LethalCompanyInputUtils\LethalCompanyInputUtils.dll</HintPath>
-			<Private>false</Private>
-		</Reference>
-		<Reference Include="LethalConfig">
-			<HintPath>C:\Users\yakka\AppData\Roaming\r2modmanPlus-local\LethalCompany\profiles\Yakka-v80-Test\BepInEx\plugins\AinaVT-LethalConfig\LethalConfig\LethalConfig.dll</HintPath>
-			<Private>false</Private>
-		</Reference>
+	  <Reference Include="Assembly-CSharp">
+	    <HintPath>..\..\SteamLibrary\steamapps\common\Lethal Company\Lethal Company_Data\Managed\Assembly-CSharp.dll</HintPath>
+	    <Private>False</Private>
+	  </Reference>
+	  <Reference Include="LethalCompanyInputUtils">
+	    <HintPath>..\r2modman\LethalCompany\profiles\AAAAA\BepInEx\plugins\Rune580-LethalCompany_InputUtils\LethalCompanyInputUtils\LethalCompanyInputUtils.dll</HintPath>
+	    <Private>False</Private>
+	  </Reference>
+	  <Reference Include="LethalConfig">
+	    <HintPath>..\r2modman\LethalCompany\profiles\AAAAA\BepInEx\plugins\AinaVT-LethalConfig\LethalConfig\LethalConfig.dll</HintPath>
+	    <Private>False</Private>
+	  </Reference>
+	  <Reference Include="Unity.InputSystem">
+	    <HintPath>..\..\SteamLibrary\steamapps\common\Lethal Company\Lethal Company_Data\Managed\Unity.InputSystem.dll</HintPath>
+	    <Private>False</Private>
+	  </Reference>
+	  <Reference Include="Unity.Netcode.Runtime">
+	    <HintPath>..\..\SteamLibrary\steamapps\common\Lethal Company\Lethal Company_Data\Managed\Unity.Netcode.Runtime.dll</HintPath>
+	    <Private>False</Private>
+	  </Reference>
+	  <Reference Include="UnityEngine">
+	    <HintPath>..\..\SteamLibrary\steamapps\common\Lethal Company\Lethal Company_Data\Managed\UnityEngine.dll</HintPath>
+	    <Private>False</Private>
+	  </Reference>
+	  <Reference Include="UnityEngine.AIModule">
+	    <HintPath>..\..\SteamLibrary\steamapps\common\Lethal Company\Lethal Company_Data\Managed\UnityEngine.AIModule.dll</HintPath>
+	    <Private>False</Private>
+	  </Reference>
+	  <Reference Include="UnityEngine.CoreModule">
+	    <HintPath>..\..\SteamLibrary\steamapps\common\Lethal Company\Lethal Company_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+	    <Private>False</Private>
+	  </Reference>
+	  <Reference Include="UnityEngine.PhysicsModule">
+	    <HintPath>..\..\SteamLibrary\steamapps\common\Lethal Company\Lethal Company_Data\Managed\UnityEngine.PhysicsModule.dll</HintPath>
+	    <Private>False</Private>
+	  </Reference>
+	  <Reference Include="UnityEngine.TextRenderingModule">
+	    <HintPath>..\..\SteamLibrary\steamapps\common\Lethal Company\Lethal Company_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+	    <Private>False</Private>
+	  </Reference>
+	  <Reference Include="UnityEngine.UI">
+	    <HintPath>..\..\SteamLibrary\steamapps\common\Lethal Company\Lethal Company_Data\Managed\UnityEngine.UI.dll</HintPath>
+	    <Private>False</Private>
+	  </Reference>
+	  <Reference Include="UnityEngine.UIModule">
+	    <HintPath>..\..\SteamLibrary\steamapps\common\Lethal Company\Lethal Company_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+	    <Private>False</Private>
+	  </Reference>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Reference Update="System">
+	    <Private>False</Private>
+	  </Reference>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Reference Update="System.Core">
+	    <Private>False</Private>
+	  </Reference>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Reference Update="System.Data">
+	    <Private>False</Private>
+	  </Reference>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Reference Update="System.Drawing">
+	    <Private>False</Private>
+	  </Reference>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Reference Update="System.IO.Compression.FileSystem">
+	    <Private>False</Private>
+	  </Reference>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Reference Update="System.Numerics">
+	    <Private>False</Private>
+	  </Reference>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Reference Update="System.Runtime.Serialization">
+	    <Private>False</Private>
+	  </Reference>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Reference Update="System.Xml">
+	    <Private>False</Private>
+	  </Reference>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Reference Update="System.Xml.Linq">
+	    <Private>False</Private>
+	  </Reference>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="MineshaftElevatorFix\" />
 	</ItemGroup>
 </Project>
