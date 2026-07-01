@@ -3,6 +3,8 @@
 
 ![BottomElevatorPanelLines](https://github.com/user-attachments/assets/acbf9f40-f0af-4f2c-aed9-3d3b25144a30)
 
+*Shows navigational lines to BottomElevatorPanel!*
+
 ## MineshaftElevatorFix Installation
 1. Please install the original LeadMeOut first.
 
