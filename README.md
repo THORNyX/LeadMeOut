@@ -1,6 +1,8 @@
 # MineshaftElevator bug Fix
 **I've experienced a bug in the mineshafts where the line would search for the highest point near the elevator in an attempt to reach the main entrance, In this situation, I attempted to target the BottomElevatorPanel.**
 
+![BottomElevatorPanelLines](https://raw.githubusercontent.com/THORNyX/LeadMeOut/blob/master/Images/LeadMeOut-BottomElevatorPanelLines-Fix.png)
+
 ## MineshaftElevatorFix Installation
 1. Please install the original LeadMeOut first.
 
