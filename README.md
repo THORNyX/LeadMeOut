@@ -1,7 +1,7 @@
 # MineshaftElevator bug Fix
 **I've experienced a bug in the mineshafts where the line would search for the highest point near the elevator in an attempt to reach the main entrance, In this situation, I attempted to target the BottomElevatorPanel.**
 
-![BottomElevatorPanelLines](https://github.com/user-attachments/assets/acbf9f40-f0af-4f2c-aed9-3d3b25144a30)
+![BottomElevatorPanelLines](https://github.com/user-attachments/assets/42ed7d76-367f-45e0-931b-fad80f040ba6)
 
 *Shows navigational lines to BottomElevatorPanel!*
 
